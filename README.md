@@ -49,8 +49,7 @@ MedCare is a multi-page healthcare information website deployed on a Linux virtu
 7. [SSL/TLS with Let's Encrypt](#7-ssltls-with-lets-encrypt)
 8. [PHP Contact Form Setup](#8-php-contact-form-setup)
 9. [Monitoring Script](#9-monitoring-script)
-10. [Cron Scheduling](#10-cron-scheduling)
-11. [References](#11-references)
+10. [References](#10-references)
 
 ---
 
