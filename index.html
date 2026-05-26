@@ -3,32 +3,154 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Allan Kibiwott | ICT Student</title>
-  <style>
-    body { font-family: Arial, sans-serif; max-width: 800px; margin: 60px auto;
-           padding: 0 20px; background: #f9f9f9; color: #333; }
-    h1   { color: #1F3864; }
-    h2   { color: #2E5A8C; border-bottom: 2px solid #eee; padding-bottom: 6px; }
-    .badge { display: inline-block; background: #2E5A8C; color: white;
-             padding: 4px 12px; border-radius: 20px; margin: 4px; font-size: 0.9em; }
-    footer { margin-top: 60px; color: #999; font-size: 0.85em; }
-  </style>
+  <title>MedCare — Trusted Health Information | allankibiwott.net</title>
+  <meta name="description" content="MedCare provides trusted health information, appointment booking, and wellness resources for the community.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>Allan Kibiwott</h1>
-  <p>ICT Student | Murdoch University | allankibiwott.net</p>
-  <h2>About</h2>
-  <p>This site is hosted on a Linux (Ubuntu 22.04) virtual machine in
-     Microsoft Azure, configured and deployed as part of ICT171.</p>
-  <h2>Skills</h2>
-  <span class="badge">Linux</span>
-  <span class="badge">Apache2</span>
-  <span class="badge">Azure</span>
-  <span class="badge">SSH</span>
-  <span class="badge">Git</span>
-  <h2>Projects</h2>
-  <p><strong>ICT171 Cloud Server</strong> — Azure Ubuntu VM with Apache,
-     SSL/TLS, and GoDaddy DNS. Documented on GitHub.</p>
-  <footer>Hosted on Azure &mdash; allankibiwott.net</footer>
+
+  <!-- NAV -->
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">&#x2764;</span> MedCare
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="health-tips.html">Health Tips</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">&#9776;</button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-content">
+      <div class="hero-text">
+        <span class="badge">Trusted Health Resource</span>
+        <h1>Your Health,<br>Our Priority</h1>
+        <p>MedCare provides accessible, evidence-based health information and wellness resources to help you make informed decisions about your wellbeing.</p>
+        <div class="hero-buttons">
+          <a href="services.html" class="btn btn-primary">Our Services</a>
+          <a href="contact.html" class="btn btn-outline">Book Consultation</a>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-card">
+          <span class="stat-number">24/7</span>
+          <span class="stat-label">Health Info</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">50+</span>
+          <span class="stat-label">Health Topics</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">Free</span>
+          <span class="stat-label">Resources</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES PREVIEW -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-header">
+        <h2>What We Offer</h2>
+        <p>Comprehensive health resources designed for everyone</p>
+      </div>
+      <div class="cards-grid">
+        <div class="card">
+          <div class="card-icon" style="background:#e8f4fd;">&#128138;</div>
+          <h3>Health Consultations</h3>
+          <p>Connect with health professionals for personalised guidance on your wellness journey.</p>
+          <a href="services.html" class="card-link">Learn more &rarr;</a>
+        </div>
+        <div class="card">
+          <div class="card-icon" style="background:#e8fdf4;">&#128218;</div>
+          <h3>Medical Information</h3>
+          <p>Access a comprehensive library of evidence-based health articles and condition guides.</p>
+          <a href="health-tips.html" class="card-link">Learn more &rarr;</a>
+        </div>
+        <div class="card">
+          <div class="card-icon" style="background:#fdf8e8;">&#127919;</div>
+          <h3>Wellness Tracking</h3>
+          <p>Use our health assessment tools to monitor and improve your day-to-day wellbeing.</p>
+          <a href="services.html" class="card-link">Learn more &rarr;</a>
+        </div>
+        <div class="card">
+          <div class="card-icon" style="background:#fde8e8;">&#128158;</div>
+          <h3>Emergency Guidance</h3>
+          <p>Know what to do in a medical emergency — clear, actionable first-aid information.</p>
+          <a href="services.html" class="card-link">Learn more &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HEALTH TIP OF THE DAY -->
+  <section class="section tip-section">
+    <div class="container">
+      <div class="tip-box">
+        <div class="tip-label">&#127775; Health Tip of the Day</div>
+        <p id="tip-text">Loading tip...</p>
+        <button class="btn btn-outline-white" onclick="newTip()">Next Tip</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT / SERVER INFO -->
+  <section class="section" id="about">
+    <div class="container about-grid">
+      <div class="about-text">
+        <h2>About This Project</h2>
+        <p>MedCare is hosted on a <strong>Linux (Ubuntu 22.04 LTS)</strong> virtual machine running on <strong>Microsoft Azure</strong>, configured and deployed as part of ICT171 at Murdoch University.</p>
+        <p>The server runs <strong>Apache2</strong> with <strong>PHP</strong>, secured with an <strong>SSL/TLS certificate</strong> from Let's Encrypt, and is accessible at <strong>allankibiwott.net</strong> via GoDaddy DNS.</p>
+        <ul class="tech-list">
+          <li><span class="tech-tag">Ubuntu 22.04 LTS</span></li>
+          <li><span class="tech-tag">Apache2 + PHP</span></li>
+          <li><span class="tech-tag">Let's Encrypt SSL</span></li>
+          <li><span class="tech-tag">Azure IaaS</span></li>
+          <li><span class="tech-tag">GoDaddy DNS</span></li>
+        </ul>
+      </div>
+      <div class="about-visual">
+        <div class="server-card">
+          <div class="server-row"><span>Server Status</span><span class="status-dot"></span><span class="status-green">Online</span></div>
+          <div class="server-row"><span>Domain</span><span>allankibiwott.net</span></div>
+          <div class="server-row"><span>OS</span><span>Ubuntu 22.04 LTS</span></div>
+          <div class="server-row"><span>Web Server</span><span>Apache2 + PHP</span></div>
+          <div class="server-row"><span>SSL/TLS</span><span class="status-green">&#10003; Active</span></div>
+          <div class="server-row"><span>Cloud</span><span>Microsoft Azure</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <span class="logo">&#x2764; MedCare</span>
+        <p>Trusted health information for everyone.</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="health-tips.html">Health Tips</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <p>Hosted on Azure &bull; allankibiwott.net</p>
+        <p>ICT171 Assignment 3 &mdash; Murdoch University</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
 </body>
 </html>
