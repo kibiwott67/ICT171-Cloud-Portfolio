@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Health Tips — MedCare</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo"><span class="logo-icon">&#x2764;</span> MedCare</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="health-tips.html" class="active">Health Tips</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">&#9776;</button>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1>Health Tips</h1>
+      <p>Evidence-based advice for a healthier lifestyle</p>
+    </div>
+  </section>
+
+  <!-- FILTER TABS -->
+  <section class="section">
+    <div class="container">
+      <div class="filter-tabs">
+        <button class="tab-btn active" onclick="filterTips('all', this)">All</button>
+        <button class="tab-btn" onclick="filterTips('nutrition', this)">Nutrition</button>
+        <button class="tab-btn" onclick="filterTips('mental', this)">Mental Health</button>
+        <button class="tab-btn" onclick="filterTips('fitness', this)">Fitness</button>
+        <button class="tab-btn" onclick="filterTips('sleep', this)">Sleep</button>
+      </div>
+
+      <div class="tips-grid" id="tips-grid">
+
+        <article class="tip-article" data-category="nutrition">
+          <div class="tip-cat-badge nutrition">Nutrition</div>
+          <h3>Stay Hydrated Throughout the Day</h3>
+          <p>Aim for 8 glasses (2 litres) of water daily. Dehydration contributes to fatigue, headaches, and poor concentration. Keep a bottle at your desk as a visual reminder.</p>
+          <div class="tip-meta">&#128203; 2 min read</div>
+        </article>
+
+        <article class="tip-article" data-category="fitness">
+          <div class="tip-cat-badge fitness">Fitness</div>
+          <h3>Walk 10,000 Steps Daily</h3>
+          <p>Regular walking reduces the risk of heart disease, type 2 diabetes, and depression. Use a phone pedometer to track your steps — small changes add up quickly.</p>
+          <div class="tip-meta">&#128203; 3 min read</div>
+        </article>
+
+        <article class="tip-article" data-category="sleep">
+          <div class="tip-cat-badge sleep">Sleep</div>
+          <h3>Maintain a Consistent Sleep Schedule</h3>
+          <p>Going to bed and waking at the same time — even on weekends — regulates your body clock. Adults need 7–9 hours. Poor sleep raises risk of obesity, diabetes, and cardiovascular disease.</p>
+          <div class="tip-meta">&#128203; 3 min read</div>
+        </article>
+
+        <article class="tip-article" data-category="mental">
+          <div class="tip-cat-badge mental">Mental Health</div>
+          <h3>Practice Mindfulness for 10 Minutes Daily</h3>
+          <p>Even brief mindfulness practice reduces cortisol (stress hormone) levels. Apps like Headspace or Calm can guide beginners. Consistency matters more than duration.</p>
+          <div class="tip-meta">&#128203; 4 min read</div>
+        </article>
+
+        <article class="tip-article" data-category="nutrition">
+          <div class="tip-cat-badge nutrition">Nutrition</div>
+          <h3>Eat More Whole Foods</h3>
+          <p>A diet rich in vegetables, fruits, legumes, and whole grains reduces chronic disease risk significantly. Aim to fill half your plate with vegetables at every meal.</p>
+          <div class="tip-meta">&#128203; 3 min read</div>
+        </article>
+
+        <article class="tip-article" data-category="fitness">
+          <div class="tip-cat-badge fitness">Fitness</div>
+          <h3>Strength Training Twice a Week</h3>
+          <p>Resistance training preserves muscle mass, improves bone density, and boosts metabolism. Bodyweight exercises (push-ups, squats) require no equipment and are highly effective.</p>
+          <div class="tip-meta">&#128203; 4 min read</div>
+        </article>
+
+        <article class="tip-article" data-category="mental">
+          <div class="tip-cat-badge mental">Mental Health</div>
+          <h3>Limit Screen Time Before Bed</h3>
+          <p>Blue light from phones and laptops suppresses melatonin — the hormone that makes you sleepy. Avoid screens for 60 minutes before bed, or use a blue light filter.</p>
+          <div class="tip-meta">&#128203; 2 min read</div>
+        </article>
+
+        <article class="tip-article" data-category="nutrition">
+          <div class="tip-cat-badge nutrition">Nutrition</div>
+          <h3>Don't Skip Breakfast</h3>
+          <p>A balanced breakfast stabilises blood sugar, improves concentration, and reduces overeating later in the day. Aim for protein + complex carbohydrate + healthy fat.</p>
+          <div class="tip-meta">&#128203; 2 min read</div>
+        </article>
+
+        <article class="tip-article" data-category="sleep">
+          <div class="tip-cat-badge sleep">Sleep</div>
+          <h3>Keep Your Bedroom Cool and Dark</h3>
+          <p>The ideal sleep temperature is 16–19°C. Darkness triggers melatonin release. Blackout curtains or a sleep mask can dramatically improve sleep quality.</p>
+          <div class="tip-meta">&#128203; 2 min read</div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div><span class="logo">&#x2764; MedCare</span><p>Trusted health information for everyone.</p></div>
+      <div class="footer-links">
+        <a href="index.html">Home</a><a href="services.html">Services</a>
+        <a href="health-tips.html">Health Tips</a><a href="contact.html">Contact</a>
+      </div>
+      <div><p>Hosted on Azure &bull; allankibiwott.net</p><p>ICT171 Assignment 3 &mdash; Murdoch University</p></div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

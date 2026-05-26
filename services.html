@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services — MedCare</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo"><span class="logo-icon">&#x2764;</span> MedCare</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="health-tips.html">Health Tips</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">&#9776;</button>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1>Our Services</h1>
+      <p>Evidence-based health resources and support for your wellness journey</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="services-grid">
+
+        <div class="service-item">
+          <div class="service-icon">&#128138;</div>
+          <div class="service-text">
+            <h3>Health Consultations</h3>
+            <p>Book a consultation with a qualified health professional to discuss your symptoms, medications, or general wellbeing. We offer guidance on a wide range of health concerns.</p>
+            <ul>
+              <li>General health assessments</li>
+              <li>Chronic disease management advice</li>
+              <li>Mental health support referrals</li>
+              <li>Medication queries</li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary" style="margin-top:1rem;">Book Now</a>
+          </div>
+        </div>
+
+        <div class="service-item">
+          <div class="service-icon">&#128218;</div>
+          <div class="service-text">
+            <h3>Medical Information Library</h3>
+            <p>Browse our growing library of evidence-based health articles written in plain language. Covering hundreds of conditions, medications, and wellness topics.</p>
+            <ul>
+              <li>Condition A–Z guides</li>
+              <li>Medication information sheets</li>
+              <li>Symptoms checker guides</li>
+              <li>Treatment option summaries</li>
+            </ul>
+            <a href="health-tips.html" class="btn btn-primary" style="margin-top:1rem;">Browse Library</a>
+          </div>
+        </div>
+
+        <div class="service-item">
+          <div class="service-icon">&#127919;</div>
+          <div class="service-text">
+            <h3>Wellness Assessments</h3>
+            <p>Use our interactive wellness tools to understand your current health status and identify areas for improvement. Completely free and private.</p>
+            <ul>
+              <li>BMI calculator</li>
+              <li>Hydration tracker</li>
+              <li>Sleep quality assessment</li>
+              <li>Stress level quiz</li>
+            </ul>
+            <a href="health-tips.html" class="btn btn-primary" style="margin-top:1rem;">Try a Tool</a>
+          </div>
+        </div>
+
+        <div class="service-item">
+          <div class="service-icon">&#128158;</div>
+          <div class="service-text">
+            <h3>Emergency First Aid Guides</h3>
+            <p>Access clear, step-by-step first-aid guidance for common medical emergencies. Bookmark this page — it could save a life.</p>
+            <ul>
+              <li>CPR instructions</li>
+              <li>Choking response</li>
+              <li>Wound care</li>
+              <li>Recognising a stroke (FAST)</li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary" style="margin-top:1rem;">View Guides</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- BMI CALCULATOR -->
+  <section class="section tip-section">
+    <div class="container">
+      <div class="section-header" style="color:#fff">
+        <h2 style="color:#fff">BMI Calculator</h2>
+        <p style="color:rgba(255,255,255,0.8)">A quick health screening tool</p>
+      </div>
+      <div class="bmi-card">
+        <div class="bmi-inputs">
+          <div class="input-group">
+            <label for="weight">Weight (kg)</label>
+            <input type="number" id="weight" placeholder="e.g. 70" min="1" max="300">
+          </div>
+          <div class="input-group">
+            <label for="height">Height (cm)</label>
+            <input type="number" id="height" placeholder="e.g. 175" min="50" max="250">
+          </div>
+          <button class="btn btn-primary" onclick="calcBMI()">Calculate</button>
+        </div>
+        <div id="bmi-result" class="bmi-result" style="display:none;"></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div><span class="logo">&#x2764; MedCare</span><p>Trusted health information for everyone.</p></div>
+      <div class="footer-links">
+        <a href="index.html">Home</a><a href="services.html">Services</a>
+        <a href="health-tips.html">Health Tips</a><a href="contact.html">Contact</a>
+      </div>
+      <div><p>Hosted on Azure &bull; allankibiwott.net</p><p>ICT171 Assignment 3 &mdash; Murdoch University</p></div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
